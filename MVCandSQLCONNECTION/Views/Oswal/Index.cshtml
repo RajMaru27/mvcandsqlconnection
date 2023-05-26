@@ -1,0 +1,17 @@
+﻿@using System.Data;
+@model MVCandSQLCONNECTION.Models.OswalDetails
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@using (Html.BeginForm("AddForm", "Oswal", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.ClassId)
+    @Html.DropDownListFor(x => x.ClassId,Model.OSlist)
+    <br />
+    @Html.LabelFor(x => x.StudentsId)
+    @Html.DropDownListFor(x => x.StudentsId,Model.Stdlist)
+    <br />
+    <input type="submit"value="submit" />
+}

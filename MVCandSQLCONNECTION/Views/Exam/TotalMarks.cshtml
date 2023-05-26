@@ -1,0 +1,34 @@
+﻿@model MVCandSQLCONNECTION.Models.ExamList
+@using System.Data;
+@{
+    ViewBag.Title = "TotalMarks";
+}
+
+
+<main>
+    <table class="table">
+        <thead>
+            <tr>
+                @foreach (DataColumn dc in Model.Etable.Columns)
+                {
+                    <td scope="col">
+                        @dc.ColumnName
+                    </td>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (DataRow dr in Model.Etable.Rows)
+            {
+                <tr>
+                    @foreach (DataColumn dc in Model.Etable.Columns)
+                    {
+                        <td>
+                            @dr[dc.ColumnName]
+                        </td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+</main>

@@ -1,0 +1,17 @@
+﻿@model MVCandSQLCONNECTION.Models.LoginDetails
+@{
+    ViewBag.Title = "loginform";
+}
+
+<h2>loginform</h2>
+
+@using (Html.BeginForm("SubmitForm","Class",FormMethod.Post))
+{
+    @Html.LabelFor(x => x.Email)
+    @Html.TextBoxFor(x => x.Email)
+    <br />
+    @Html.LabelFor(x => x.Password)
+    @Html.PasswordFor(x => x.Password)
+    <br />
+    <input type="submit"value="submit" />
+}

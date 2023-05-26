@@ -1,0 +1,24 @@
+﻿@model MVCandSQLCONNECTION.Models.ExamDetails
+@using System.Data;
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@using (Html.BeginForm("AddForm", "Exam", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.SubjectId)
+    @Html.DropDownListFor(x => x.SubjectId,Model.Sublist)
+    <br />
+    @Html.LabelFor(x => x.OswalId)
+    @Html.DropDownListFor(x => x.OswalId,Model.oswlist)
+    <br />
+    @Html.LabelFor(x => x.Marks)
+    @Html.TextBoxFor(x => x.Marks)
+    <br />
+    @Html.LabelFor(x => x.OutOf)
+    @Html.TextBoxFor(x => x.OutOf)
+    <br />
+    <input type="submit"value="submit" />
+}
+            

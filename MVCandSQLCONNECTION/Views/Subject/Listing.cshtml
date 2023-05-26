@@ -1,0 +1,39 @@
+﻿@model MVCandSQLCONNECTION.Models.SubjectList
+@using System.Data;
+@{
+    ViewBag.Title = "Listing";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<a href="@Url.Action("Index")" class="btn btn-primary">Add</a>
+<br />
+@TempData["Added"]
+<br />
+@TempData["Delete"]
+<br />
+@TempData["Edit"]
+<br />
+<main>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">
+                    Subject Name
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var SUB in Model.slist)
+            {
+                <tr>
+                    <td>
+                        @SUB.SubjectName
+                    </td>
+                    <td><a href="@Url.Action("Delete", new {Id = SUB.SubjectId})"> Delete </a></td>
+                    <td><a href="@Url.Action("Edit", new {Id = SUB.SubjectId})"> Edit </a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</main>
