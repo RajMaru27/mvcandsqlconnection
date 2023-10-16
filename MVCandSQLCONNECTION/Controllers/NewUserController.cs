@@ -18,8 +18,8 @@ namespace MVCandSQLCONNECTION.Controllers
             var user = new UserDetails();
             return View(user);
         }
-        [HttpPost]
 
+        [HttpPost]
         public ActionResult AddForm(UserDetails ud)
         {
             string ConnectionString = ConfigurationManager.ConnectionStrings["DBConnection"].ConnectionString;

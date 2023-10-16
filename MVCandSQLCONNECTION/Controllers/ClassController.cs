@@ -18,8 +18,8 @@ namespace MVCandSQLCONNECTION.Controllers
             var C = new ClassDetails();
             return View(C);
         }
-        [HttpPost]
 
+        [HttpPost]
         public ActionResult AddForm(ClassDetails cd)
         {
             string ConnectionString = ConfigurationManager.ConnectionStrings["DBConnection"].ConnectionString;
@@ -108,6 +108,7 @@ namespace MVCandSQLCONNECTION.Controllers
             }
             return View(cs);
         }
+
         [HttpPost]
         public ActionResult Edit(ClassDetails cs)
         {
@@ -133,8 +134,8 @@ namespace MVCandSQLCONNECTION.Controllers
             var l = new LoginDetails();
             return View(l);
         }
-        [HttpPost]
 
+        [HttpPost]
         public ActionResult SubmitForm(LoginDetails ld)
         {
             string ConnectionString = ConfigurationManager.ConnectionStrings["DBConnection"].ConnectionString;

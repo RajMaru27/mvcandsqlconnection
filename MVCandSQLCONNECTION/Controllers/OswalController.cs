@@ -186,8 +186,8 @@ namespace MVCandSQLCONNECTION.Controllers
             } 
             return View(osl);
         }
-        [HttpPost]
 
+        [HttpPost]
         public ActionResult Edit(OswalDetails od)
         {
             string ConnectionString = ConfigurationManager.ConnectionStrings["DBConnection"].ConnectionString;
